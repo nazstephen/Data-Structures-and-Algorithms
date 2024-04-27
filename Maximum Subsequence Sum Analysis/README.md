@@ -24,8 +24,8 @@ To find the maximum subsequence sum this algorithm makes improvements to MSS2. I
 
 From my analysis of the four methods I can conclude that MSS4 is the most efficient with MSS3 being the second most, MSS2 being the third most and MSS1 being the least. From my test runs I was able to see that the program took more time with calculating the maximum subsequence sum with test2.txt because there were more integers in that file than in test1.txt. However, I noticed that MSS2 was faster than MSS3 when I used them on test1.txt. I assume this might be because the MSS3 algorithm encountered a worst case scenario, making the time it took for it to calculate the maximum subsequence sum 6 seconds slower than the time it took for MSS2 to calculate it. Apart from that the trend seems to show that MSS4 is indeed the fastest with MSS1 being the slowest and MSS2 and MSS3 being the second and third slowest respectively.
 
-![Alt Text](RuntimeChart1.png)
+![Alt Text](RuntimeChart.png)
 
-![Alt Text](RuntimeTable1.png)
+![Alt Text](RuntimeTable.png)
 
 
