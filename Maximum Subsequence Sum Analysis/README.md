@@ -26,6 +26,6 @@ From my analysis of the four methods I can conclude that MSS4 is the most effici
 
 ![Alt Text](RuntimeChart1.png)
 
-![Alt Text](RuntimeTable.png)
+![Alt Text](RuntimeTable1.png)
 
 
