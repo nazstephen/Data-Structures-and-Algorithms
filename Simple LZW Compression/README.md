@@ -1,11 +1,11 @@
 # Simple LZW Compression
 This is a Java Program that has two classes, Compress.java and Decompress.java. These functions read in files and use data input streams and data output streams to read in and write out to files. 
 
-# Compression
+## Compression
 The compression initializes the dictionary with ASCII values up to 127 and then reads the longest prefix from the file that is in the dictionary. It then uses the hash function to find the correct index corresponding to the prefix. The hash function sums up the ASCII values of the characters and then mods them by the table size starting at 127. Through our adding method we are able to evenly distribute the nodes. This is because every table size that we modded the sum by just had 1 and itself as factors. Therefore, the chains were not too long at any spot. Our hash function is simple and does not take very long to compute as keys grow longer and larger. As these keys get bigger, the table size also gets bigger during each rehash. This helps avoid having an overly large table size. In our program, as more entries are fed in, our table eventually gets doubled and set to the size of the next closest prime. The old nodes are then rehashed into the new table, which decreases the average size of the linked lists. 
 
-# Decompression
+## Decompression
 The Decompression class reads shorts from the input file and puts them into the DecompDict if they are not there already there. It also writes the characters corresponding to the short values being read in if the are in the dictionary. New entries are put in simply by filling the next available position in the table, so the complexity for each insert is O(1). We basically had a variable which increased every time we added a new chain from the DChain class into the table. The table is supposed to resize by doubling itself and putting the old values into a larger dictionary. However, this program does not seem to work if the .zzz file contains more than a certain number of characters.
 
-# Conclusion
+## Conclusion
 In conclusion, our program takes user input in the form of a file, compresses that file, and then creates two files, one log file stating the time and number of times be rehashed, as well as the compressed file. Similarly the decompression class works by using an inputted compressed file and creating the dictionary backward. This also creates a log file that displays the programs runtime, as well as the number of times it rehashed. However, decompression does not work if the .zzz file exceeds a certain number of characters.
